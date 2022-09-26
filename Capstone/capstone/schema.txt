@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS Users(
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT,
+    last_name TEXT,
+    email TEXT UNIQUE NOT NULL,
+    phone TEXT,
+    password TEXT NOT NULL,
+    address TEXT,
+    city TEXT,
+    state TEXT,
+    postal_code TEXT,
+    active INTEGER DEFAULT 1,
+    instructors INTEGER DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS Assessments(
+    assissment_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT,
+    active INTEGER DEFAULT 1
+);
+
+Creat TABLE IF NOT EXISTS Comptency(
+    Comptency_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    manager_id INTEGER,
+    assissment_id INTEGER 
+    start_date TEXT,
+    end_date TEXT,
+    active INTEGER DEFAULT 1,
+    FOREIGN KEY(manager_id)
+
+);

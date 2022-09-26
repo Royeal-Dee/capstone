@@ -1,0 +1,163 @@
+INSERT INTO Competency(name, description)
+VALUES (
+    ("data types", "set when a value is assigned to a variable, specified with constructor functions ie. 
+        Text Type:	str
+        Numeric Types:	int, float, complex
+        Sequence Types:	list, tuple, range
+        Mapping Type:	dict
+        Set Types:	set, frozenset
+        Boolean Type:	bool
+        Binary Types:	bytes, bytearray, memoryview
+         Type:	NoneType"),
+    ("values", ""),
+    ("functions", 
+        "a block of code which only runs when it is called that passes data known as parameters, returns data as a result;
+         To call a function, use the function name followed by parenthesis;
+         "),
+    ("boolean_logic", 
+        "Booleans represent one of two values: True or False.
+        "the bool() function allwos you to evaluate any value and return True or False.
+        "),
+    ("conditionals", ""),
+    ("loops", 
+        "used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+        "),
+    ("data_structures", 
+        "store multiple related values.
+        collections of data that keep many values in a single variable.
+        array = an ordered, fixed length list of items referenced in a single variable where every element MUST be same data type.
+        helpful when efficiently handling large amounts of data.
+        stores many values referenced with a single variable plus an index.
+        square brackest used to designate arrays or to access elements in arrays.
+        list = not fixed in length can contain data of any data type.
+        initialize an emply list with no elements in brackets and initial zise of 0.
+        initialized with predefined values.
+        .append() will add an element to the end of list.
+        .insert() will add element in fromt of any other or specified element in list.
+        for in loop to iterate through the elements of a list. 
+        enumerate will return both the index and the value of each element ont the iteration loop.
+        pop() method removes an element by position.
+        remove() function removes an element not by position but by values.
+        clear() method removes all elements from list.
+        len() function used to get the number of elements in list.
+        count() function takes single argument, counts how many occurances of a particular value in a list.
+        sort() standard list function is destructive and rearranges the elements in numerical or alphabetical order.
+        two optional parameters: key function used to specify the key by which to sort objects 
+        and reverse is a boolean stating wheteher the list should be sorted in reverse or descending order.
+        sorted() function not a standard list function but a standard python function,
+        will copy the list or string and sort elements in ascending or descending order and return a newly sorted list. 
+        three parameters: interable = a sequence (string, tuple, list) or collection (set, dictionary) or any other iterable object.
+        reverse (optional) = if True, sorted list is reversed(sorted in descending order) defaults to false if not provided.
+        key (optional) = a function that serves as a key for the sort comparison. defaults to None.
+        dictionary mutable, unordered and store data in key-value pairs.
+        often called associative arrays or maps is other languages.
+        dictionaries in python are declared with curly braces {} that contain key-value pairs separated by commas,
+        keys are linke indexes to the corresponding values. can be integers, floats strings or even complex data types like tuples. case sensitive.
+        list elements accessed by position in list(index).
+        values can be any data type. can be duplicated in a dictionary.
+        when a dictionary is a value in a dictionary it is called a nested dictionary.
+        accessed by keys using square brackets[].
+        non-existent key error if attempt to access a value using a key that does not exist in the dictionary.
+        dictionary functions. operators and built-functions
+        in and not in conditional operators "),
+    ("lists, 
+        "used to store multiple items in a single variable. 
+        created using square brackets.
+        indexed, starting at index [0].
+        defined order, new items added to end.
+        change, add, and remove items in a list after it has been created.
+        since indexed, can have items with same value.
+        len() function determins how many items.
+        list items acn be any data type.
+        list() constructor used when creating a new list.
+        "),
+    ("dictionaries", 
+        "used to store data values in key:value pairs.
+        a changeable, ordered collection collection with NO duplicates.
+        written with curly brackets, and have keys and values.
+        presented in key:value pairs, and can be referred to by using the key name.
+        defined order that will not change.
+        change, add, or remove items after created.
+        cannot have two items with same key.
+        len() function used to determine how many items in dictionary.
+        values can be any data type.
+        four data type collection: List, Tuple, Set, Dictionary.
+        access items of a dictionary by referring to its key name inside square brackets.
+        get() method access items of a dictionary by referring to its key name.
+        keys() method will return a list of all keys in dictionary.
+        values() method will return a list of all values in dictionary.
+        items() method will return both keys and values in a dictionary.
+        determine if specified key is present use in keyword.
+        change values of specified item by referring to key name.
+        update() method will update dictionary with items from given argument. If the item does not exist, item will be added.
+        add item to dictionary using update() method by assigning a value to a new index key.
+        pop() method removes the item with the specified key name.
+        popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead)
+        del keyword removes the item with the specified key name, can also delete the dictionary completely.
+        clear() method empties the dictionary.
+        copy() method built-in way to make a copy.
+        dict() function built-in way to make a copy.
+        nested dictionaries a dictionary that contains dictionaries.
+        values can be any data type including other dictionaries and lists.
+        when using the in and not in conditional operators, check variable or literal provided is in or not in keys of dictionary.
+        len() function used to return number of elements in dictionary.
+        .clear() function pemties all key-value pairs from dictionary.
+        .get() function safer method getting value from key in dictionary.
+        syntax .get function = dict.get(<key>[, <default>])
+        .items() function returns a dict_items object which encapsulates a list of tuples containing the key-value pairs in dictionary.
+        first item in tuple is key and second item in tuple is key's value.
+        .keys() function returns dict_keys object that wraps a list of keys in dictionary.
+        .values() function returns dict_values object that wraps a list of values in dictionary.
+        .pop() function remeoves a key, if exists, and returns its value.
+        syntax .pop() function = dict.pop(<key>[, <default>])
+        pop() function raises KeyError if key does not exist in dictionary.
+        .popitem() funtion removes last added key-value pair and returns as a tuple.
+        update() function merges one dictionary with another dictionary or with an iterable of key-value pairs, destructive, returns None.
+        syntax .update() function = dic.update(<obj>)
+        "),
+    ("working_with_files", 
+        "file is a collection of data, programs, etc stored under a single identifying name. 
+        come in many different data formats, designated by their extensions.
+        two primary storage methods are text and binary.
+        text files store their data in a text_based encoding can be read with any text-editor can be human-readable.
+        binary files store data as bytes of 0's and 1's genereally not human-readable without conversion software.
+        read is to load a file's contents into memory.
+        create a new file.
+        write is to save data to a file.
+        open funtion requires two parameters, name of file and open mode.
+        r = read is used to open to file for reading. throws error if file does not exist.
+        a = append opens a file to add data to the end of the file. creates file if does not exist.
+        w = write opens file for writing. creates file if does not exist.
+        x = creates a specific file. throws error if file already exists.
+        data format specified by adding additional character to mode.
+        t = opens the file in text mode.
+        b = opens file in binary mode.
+        open functions returns a reference to the file. reference should be stored in a variable to perform and close when finished.
+        close()"method finished with and close file.
+        forgetting to close() file reerence leads to memory leaks in program and program/computer crashes.),
+    ("exception_handling", ""),
+    ("quality_assurance", ""),
+    ("object_oriented_programming"), 
+        "OOP method uses objects which combine data and functions, or methods, into one logical unit.
+        class is the model or blueprint of the data an object will contain and the functions or actions that an object can perform.
+        object or instance of a class = an entity stored in a variable and operated on.
+        method is a function that is defined in the class but operates on data in an object instance.
+        classes are logical code units that contain data and methods to operate in one compact, transferable and reusable unit.
+        classes make code easier to write, maintain, understand.
+        object instances are instances of the class.
+        attributes represent the data that an object instance stores about itself.
+        methods are functions defined in the class that can modify and read the instance attributes, provide logic, and possibly output something.
+        use keyword class followed by the name of the class to define a class.
+        end lin with a colon: to indicate the start of a code block. the class definition is then indented.
+        case types: camel case = upercase first letter of all words except the first and romove spaces (camelCase)
+        pascal case = uppercase the first letter of all words, including the first and romove spaces (PascalCase)
+        snake case = lowercase all words and replace spaces with underscores (snake_case)
+        kebab case+ lowercase all words and replace spaces with dashes (kebab-case)
+        naming class, python convention to use Pascal casing.
+        init() function initializes class, also called dunder init, double underscores.
+        __init__ function takes in parameters and sets the instance variable to the values passed.
+        "),
+    ("recursion", 
+        "a defined function that can call itself. A common mathematical and programming concept."),
+    ("databases, "")
+);

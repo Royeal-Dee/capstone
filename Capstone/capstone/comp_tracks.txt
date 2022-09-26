@@ -1,0 +1,53 @@
+CREATE TABLE IF NOT EXISTS Users(
+user_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+first_name TEXT,
+last_name TEXT,
+email TEXT UNIQUE,
+phone TEXT UNIQUE,
+password TEXT VARCHAR(20),
+Active INTEGER, 
+Manager INTEGER, 
+date_created TEXT, 
+hire_date TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Competency(
+    Competency_id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    description TEXT,
+    active INTEGER DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS Assessments(
+    assessment_id INTEGER PRIMARY KEY,
+    manager_id INTEGER,
+    user_id INTEGER,
+    start_date TEXT,
+    end_date TEXT,
+    active INTEGER DEFAULT 1,
+FOREIGN KEY(manager_id)
+    REFERENCES Users(user_id)
+);
+
+CREATE TABLE IF NOT EXISTS Results(
+    results_id INTEGER PRIMARY KEY,
+    manager_id INTEGER,
+    user_id INTEGER,
+    competency_id INTEGER,
+    assessment_id INTEGER,
+    start_date TEXT,
+    end_date TEXT,
+    active INTEGER DEFAULT 1,
+FOREIGN KEY(user_id)
+    REFERENCES Users(user_id)
+
+);
+
+INSERT INTO Assessments(
+    assessment_id, manager_id, user_id, start_date, end_date, active, )
+    VALUES("name", "description", "active", "phone", "password", "manager", "date_create", "hire_date");
+
+INSERT INTO Results(
+    results_id, manager_id, user_id, competency_id, assessment_id, start_date, end_date)
+    VALUES("result_id", "manager_id", "user_id", "competency_id", "assessment_id", "start_date", "end_date");
+
